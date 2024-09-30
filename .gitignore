@@ -1,0 +1,11 @@
+.cache/
+.idea
+.DS_Store
+Thumbs.db
+.buildpath
+.project
+.settings*
+.vscode
+project.xml
+project.properties
+/vendor/

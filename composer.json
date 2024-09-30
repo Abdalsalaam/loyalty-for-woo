@@ -1,0 +1,18 @@
+{
+  "name": "lvendr/loyalty-for-woo",
+  "description": "Powerful tool to enhance customer retention, drive repeat purchases.",
+  "type": "wordpress-plugin",
+  "homepage": "https://lvendr.com",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Lvendr, Inc.",
+      "email": "admin@lvendr.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "LoyaltyForWoo\\" : "src/"
+    }
+  }
+}
