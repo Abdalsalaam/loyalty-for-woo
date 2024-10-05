@@ -133,5 +133,12 @@ class Settings_Section {
 		return apply_filters( 'lfw_get_settings', $settings );
 	}
 
-
+	/**
+	 * Check if loyalty program is enabled.
+	 *
+	 * @return bool True if enabled.
+	 */
+	public function is_loyalty_feature_enabled() {
+		return 'yes' === get_option( 'lfw_enable_loyalty' );
+	}
 }
