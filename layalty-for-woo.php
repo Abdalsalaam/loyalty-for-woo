@@ -50,5 +50,5 @@ add_action( 'plugins_loaded', 'LoyaltyForWoo\\loyalty_for_woo_init', 10 );
  * WooCommerce is not active notice.
  */
 function loyalty_for_woo_woocommerce_required() {
-	echo '<div class="notice error"><p>' . sprintf( esc_html__( 'Customer Loyalty and Rewards Program requires %1sWooCommerce%2s plugin.' ), '<a target="_blank" href="https://woocommerce.com/">', '</a>' ) . '</p></div>';
+	echo '<div class="notice error"><p>' . sprintf( esc_html__( 'Customer Loyalty and Rewards Program requires %1sWooCommerce%2s plugin.', 'loyalty-for-woo' ), '<a target="_blank" href="https://woocommerce.com/">', '</a>' ) . '</p></div>';
 }
