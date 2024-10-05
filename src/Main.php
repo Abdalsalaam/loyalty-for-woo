@@ -64,6 +64,7 @@ class Main {
 	private function init() {
 		$this->init_hooks();
 		$this->get_plugin_settings();
+		$this->get_frontend();
 	}
 
 	/**
@@ -97,5 +98,12 @@ class Main {
 		}
 
 		return self::$settings;
+	}
+
+	/**
+	 * Get plugin frontend.
+	 */
+	private function get_frontend() {
+		new Frontend\My_Account();
 	}
 }
