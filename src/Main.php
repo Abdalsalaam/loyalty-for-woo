@@ -7,6 +7,8 @@
 
 namespace LoyaltyForWoo;
 
+use LoyaltyForWoo\Settings\Settings_Section;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -26,6 +28,8 @@ class Main {
 	 * Main instance.
 	 */
 	protected static $_instance = null;
+
+	public static $settings;
 
 	/**
 	 * Constructor.
@@ -54,6 +58,7 @@ class Main {
 	 */
 	private function init() {
 		$this->init_hooks();
+		$this->get_plugin_settings();
 	}
 
 	/**
@@ -74,5 +79,18 @@ class Main {
 		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
 			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', LFW_PLUGIN_FILE, true );
 		}
+	}
+
+	/**
+	 * Get plugin settings instance.
+	 *
+	 * @return Settings_Section
+	 */
+	private function get_plugin_settings() {
+		if ( empty( self::$settings ) ) {
+			self::$settings = new Settings_Section();
+		}
+
+		return self::$settings;
 	}
 }
