@@ -22,6 +22,10 @@ namespace LoyaltyForWoo;
 
 defined( 'ABSPATH' ) || exit;
 
+if ( ! defined( 'LFW_PLUGIN_FILE' ) ) {
+	define( 'LFW_PLUGIN_FILE', __FILE__ );
+}
+
 require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
 /**

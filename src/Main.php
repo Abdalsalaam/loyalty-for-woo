@@ -72,7 +72,7 @@ class Main {
 	 */
 	public function HPOS_compatibility_declaration() {
 		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
-			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', LFW_PLUGIN_FILE, true );
 		}
 	}
 }
