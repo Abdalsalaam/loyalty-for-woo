@@ -29,7 +29,12 @@ class Main {
 	 */
 	protected static $_instance = null;
 
-	public static $settings;
+	/**
+	 * Plugin Settings.
+	 *
+	 * @var Settings_Section
+	 */
+	public static Settings_Section $settings;
 
 	/**
 	 * Constructor.
