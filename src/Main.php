@@ -64,6 +64,11 @@ class Main {
 	private function init() {
 		$this->init_hooks();
 		$this->get_plugin_settings();
+
+		if ( ! self::$settings->is_loyalty_feature_enabled() ) {
+			return;
+		}
+
 		$this->get_frontend();
 	}
 
@@ -104,6 +109,6 @@ class Main {
 	 * Get plugin frontend.
 	 */
 	private function get_frontend() {
-		new Frontend\My_Account();
+		Frontend\My_Account::instance();
 	}
 }

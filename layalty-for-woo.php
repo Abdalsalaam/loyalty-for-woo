@@ -40,8 +40,7 @@ function loyalty_for_woo_init() {
 		return;
 	}
 
-	$main_instance = Main::instance();
-	// Plugin logic.
+	loyalty_for_woo();
 }
 
 add_action( 'plugins_loaded', 'LoyaltyForWoo\\loyalty_for_woo_init', 10 );
@@ -51,4 +50,13 @@ add_action( 'plugins_loaded', 'LoyaltyForWoo\\loyalty_for_woo_init', 10 );
  */
 function loyalty_for_woo_woocommerce_required() {
 	echo '<div class="notice error"><p>' . sprintf( esc_html__( 'Customer Loyalty and Rewards Program requires %1sWooCommerce%2s plugin.', 'loyalty-for-woo' ), '<a target="_blank" href="https://woocommerce.com/">', '</a>' ) . '</p></div>';
+}
+
+/**
+ * Main plugin instance.
+ *
+ * @return Main
+ */
+function loyalty_for_woo(){
+	return Main::instance();
 }
